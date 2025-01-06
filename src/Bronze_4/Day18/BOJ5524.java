@@ -1,19 +1,17 @@
-package Bronze_4.Day15;
+package Bronze_4.Day18;
 
 import java.util.Scanner;
 
-public class BOJ24723 {
+public class BOJ5524 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         int N = sc.nextInt();
+        sc.nextLine();
 
-        int answer = 1;
-
+        String S;
         for (int i = 0; i < N; i++) {
-            answer *= 2;
+            S = sc.nextLine();
+            System.out.println(S.toLowerCase());
         }
-
-        System.out.println(answer);
     }
 }
