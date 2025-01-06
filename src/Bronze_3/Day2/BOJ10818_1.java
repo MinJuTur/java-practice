@@ -2,7 +2,7 @@ package Bronze_3.Day2;
 
 import java.util.Scanner;
 
-public class BOJ10818 {
+public class BOJ10818_1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
