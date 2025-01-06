@@ -7,23 +7,22 @@ public class BOJ17362 {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int num = n;
+        int num = n % 8;
 
-        if (n == 1) {
+        if (num == 1) {
             System.out.println(1);
         }
-
-        int[] row1 = {2, 3, 4, 5};
-        int[] row2 = {6, 7, 8, 9};
-
-        for (int i = 0; i < row2.length; i++) {
-            num -= 8;
-            if (num == row1[i]) {
-                System.out.println(num);
-            }
-            if (num == row2[i]) {
-                System.out.println(num - 2*(i+1));
-            }
+        if (num == 0 || num == 2) {
+            System.out.println(2);
+        }
+        if (num == 3 || num == 7) {
+            System.out.println(3);
+        }
+        if (num == 4 || num == 6) {
+            System.out.println(4);
+        }
+        if (num == 5) {
+            System.out.println(5);
         }
     }
 }
