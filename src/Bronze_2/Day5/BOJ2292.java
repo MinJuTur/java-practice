@@ -1,21 +1,23 @@
 package Bronze_2.Day5;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BOJ2292 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double N = ((double) sc.nextInt() + 4.0) / 6.0;
-        int roomCount;
+        int N = sc.nextInt();
 
-        ArrayList<Integer> arr = new ArrayList<>();
-        int temp = 0;
-        for (int i = 1; i <= ; i++) {
-            temp += i;
-            arr.add(temp);
+        int layer = 1;
+        int currentRoom = 1;
+        while (true) {
+            if (N > currentRoom) {
+                currentRoom += 6 * layer;
+                layer++;
+            } else {
+                System.out.println(layer);
+                break;
+            }
         }
 
-        System.out.println(roomCount);
     }
 }
