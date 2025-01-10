@@ -9,13 +9,12 @@ public class BOJ1100 {
         int count = 0;
         for (int i = 0; i < 8; i++) {
             char[] A = sc.nextLine().toCharArray();
-            sc.nextLine();
 
-            int startIndex = 1;
+            int startIndex;
             if (i % 2 == 0) startIndex = 0;
             else startIndex = 1;
 
-            for (int j = startIndex; j < 8; j+= j) {
+            for (int j = startIndex; j < 8; j+= 2) {
                 if (A[j] == 'F') count++;
             }
         }
