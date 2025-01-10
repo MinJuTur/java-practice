@@ -2,7 +2,7 @@ package Bronze_2.Day13;
 
 import java.util.Scanner;
 
-public class BOJ1100 {
+public class BOJ1100_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
@@ -10,12 +10,9 @@ public class BOJ1100 {
         for (int i = 0; i < 8; i++) {
             char[] A = sc.nextLine().toCharArray();
 
-            int startIndex;
-            if (i % 2 == 0) startIndex = 0;
-            else startIndex = 1;
-
-            for (int j = startIndex; j < 8; j+= 2) {
-                if (A[j] == 'F') count++;
+            for (int j = 0; j < 8; j++) {
+                //인덱스 번호의 합이 짝수 -> 흰색 칸
+                if (A[j] == 'F' && (i + j) % 2 == 0) count++;
             }
         }
 
