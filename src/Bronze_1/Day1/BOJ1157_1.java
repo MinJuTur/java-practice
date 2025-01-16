@@ -2,7 +2,7 @@ package Bronze_1.Day1;
 
 import java.util.Scanner;
 
-public class BOJ1157 {
+public class BOJ1157_1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
