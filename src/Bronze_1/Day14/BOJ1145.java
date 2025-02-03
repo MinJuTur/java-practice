@@ -10,7 +10,6 @@ public class BOJ1145 {
             A[i] = sc.nextInt();
         }
 
-        int Max = 0;
         for (int i = 1; i < Integer.MAX_VALUE; i++) {
             int count = 0;
             for (int j = 0; j < A.length; j++) {
