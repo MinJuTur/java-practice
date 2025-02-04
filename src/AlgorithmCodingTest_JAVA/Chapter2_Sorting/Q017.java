@@ -10,9 +10,9 @@ public class Q017 {
 
         int[] A = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
-            int temp = Integer.parseInt(String.valueOf(arr[i]));
-            A[i] = temp;
+            A[i] = Integer.parseInt(String.valueOf(arr[i]));
         }
+
         for (int j = 0; j < A.length - 1; j++) {
             int max = Integer.MIN_VALUE;
             int max_index = -1;
@@ -22,9 +22,9 @@ public class Q017 {
                     max_index = i;
                 }
             }
-            int temp = A[max_index];
-            A[max_index] = A[j];
-            A[j] = temp;
+            int temp = A[j];
+            A[j] = A[max_index];
+            A[max_index] = temp;
         }
 
         for (int i : A) {
