@@ -17,19 +17,17 @@ public class BOJ2846_2 {
             A[i] = Integer.parseInt(st.nextToken());
         }
 
-        boolean isUp = false;
         int sum = 0;
         int Max = 0;
-        int start = 0;
         for (int i = 1; i < A.length; i++) {
-            if (!isUp) start = A[i-1];
             if (A[i-1] < A[i]){
-                isUp = true;
+                sum += A[i] - A[i-1];
+                if (sum > Max) Max = sum;
             } else{
-                int height = A[i-1] - start;
-                if (height > Max) Max = height;
+                sum = 0;
             }
         }
+
         System.out.println(Max);
     }
 }
