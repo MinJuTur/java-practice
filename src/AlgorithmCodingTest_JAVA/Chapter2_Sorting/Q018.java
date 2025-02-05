@@ -11,16 +11,14 @@ public class Q018 {
             A[i] = sc.nextInt();
         }
 
-        for (int index = 1; index < N; index++) {
-            for (int i = index - 1; i >= 0 ; i--) {
-                if (A[i] < A[index]) {
-                    for (int j = i+1; j < N; j++) {
-                        int temp = A[j+1];
+        for (int now = 1; now < N; now++) {
+            for (int i = now - 1; i >= 0 ; i--) {
+                if (A[i] > A[now]) {
+                    int temp = A[now];
+                    for (int j = now - 1; j >= i - 1 ; j--) {
                         A[j+1] = A[j];
                     }
-                    int temp = A[index];
-                    A[index] = A[i+1];
-                    A[i+1] = temp;
+                    A[i] = temp;
                 }
             }
         }
