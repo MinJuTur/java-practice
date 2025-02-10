@@ -12,21 +12,22 @@ public class BOJ1181 {
         int N = Integer.parseInt(bf.readLine());
 
         //중복 없애기
-        Set<String> arr = new HashSet<>();
+        Set<String> set = new HashSet<>();
         for (int i = 0; i < N; i++) {
-            arr.add(bf.readLine());
+            set.add(bf.readLine());
         }
 
-        //사전 순으로 정렬하기
-        List<String> A = new ArrayList<>(arr);
-        Collections.sort(A);
+        List<String> arr = new ArrayList<>(set);
+        Collections.sort(arr, new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                if (o1.length() == o2.length()) return o1.compareTo(o2);
+                else return o1.length() - o2.length();
+            }
+        });
 
-        //길이 순으로 정렬하기
-        ArrayList<String> B = new ArrayList<>();
-        for (int i = 0; i < A.size(); i++) {
-            String temp = A.get(i);
-
+        for (int i = 0; i < arr.size(); i++) {
+            System.out.println(arr.get(i));
         }
-
     }
 }
