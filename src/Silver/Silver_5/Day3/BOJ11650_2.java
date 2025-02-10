@@ -8,13 +8,13 @@ public class BOJ11650_2 {
 
         int N = sc.nextInt();
 
-        ArrayList<Point> points = new ArrayList<>();
+        ArrayList<Point> arr = new ArrayList<>();
         for (int i = 0; i < N; i++) {
-            points.add(new Point(sc.nextInt(), sc.nextInt()));
+            arr.add(new Point(sc.nextInt(), sc.nextInt()));
         }
-        Collections.sort(points);
+        Collections.sort(arr);
 
-        for (Point point : points) {
+        for (Point point : arr) {
             System.out.println(point.x + " " + point.y);
         }
     }
