@@ -6,36 +6,27 @@ public class BOJ2941 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        String[] croatia = {"c=", "c-", "d-", "lj", "nj", "s=", "z="};
-        String A = sc.next();
+        String croatia1 = "dz=";
+        String[] croatia2 = {"c=", "c-", "d-", "lj", "nj", "s=", "z="};
+        String text = sc.next();
 
-        int count = 0;
-        int index = 0;
+        int count = text.length();
 
-        while (index < A.length()) {
-            if (index == A.length() - 1){
-                count++;
-                break;
-            }
-
-
-            if (index <= A.length() - 3 && A.substring(index, index + 3).equals("dz=")) {
-                index += 3;
-                count++;
+        for (int i = 0; i < text.length() - 1;) {
+            if (i <= text.length() - 3 && text.substring(i, i + 3).equals(croatia1)) {
+                i += 3;
+                count -= 2;
             } else {
                 boolean isFound = false;
-                for (int j = 0; j < croatia.length; j++) {
-                    if (A.substring(index, index + 2).equals(croatia[j])) {
-                        index += 2;
-                        count++;
+                for (int j = 0; j < croatia2.length; j++) {
+                    if (text.substring(i, i + 2).equals(croatia2[j])) {
+                        i += 2;
+                        count--;
                         isFound = true;
                         break;
                     }
                 }
-                if (!isFound) {
-                    index++;
-                    count++;
-                }
+                if (!isFound) i++;
             }
         }
 
