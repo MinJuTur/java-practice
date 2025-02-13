@@ -1,4 +1,4 @@
-package Silver.Silver_5.Day8;
+package Silver.Silver_5.Day6;
 
 import java.io.BufferedReader;
 import java.io.IOException;
