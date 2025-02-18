@@ -8,7 +8,7 @@ public class BOJ1094 {
         int X = sc.nextInt();
         int count = 0;
 
-        //X를 2진수로 표현해서 1이 되었을 때 count 한다
+        //X를 2진수로 표현할 때 1의 개수를 구한다
         while (X > 0) {
             if (X % 2 == 1) {
                 count++;
