@@ -2,7 +2,7 @@ package Silver.Silver_5.Day11;
 
 import java.util.Scanner;
 
-public class BOJ17478 {
+public class BOJ17478_1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
