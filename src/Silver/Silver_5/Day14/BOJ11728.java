@@ -25,28 +25,29 @@ public class BOJ11728 {
         int pointerA = 0;
         int pointerB = 0;
 
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringBuilder sb = new StringBuilder();
         while (pointerA < N && pointerB < M) {
             if (A[pointerA] < B[pointerB]) {
-                bw.write(A[pointerA] + " ");
+                sb.append(A[pointerA] + " ");
                 pointerA++;
-            } else if (A[pointerA] > B[pointerB]) {
-                bw.write(B[pointerB] + " ");
+            } else {
+                sb.append(B[pointerB] + " ");
                 pointerB++;
             }
         }
 
         if (pointerA == N) {
             for (int i = pointerB; i < M; i++) {
-                bw.write(B[pointerB] + " ");
-            }
-        } else if (pointerB == M) {
-            for (int i = pointerA; i < N; i++) {
-                bw.write(A[pointerA] + " ");
+                sb.append(B[i] + " ");
             }
         }
 
-        bw.flush();
-        bw.close();
+        if (pointerB == M) {
+            for (int i = pointerA; i < N; i++) {
+                sb.append(A[i] + " ");
+            }
+        }
+
+        System.out.println(sb);
     }
 }
