@@ -3,8 +3,7 @@ package Silver.Silver_5.Day16;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class BOJ2161 {
-    //자료구조(queue-FIFO)
+public class BOJ2161_1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
