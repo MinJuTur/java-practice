@@ -23,18 +23,13 @@ public class BOJ5635 {
         Collections.sort(people, new Comparator<Person>() {
             @Override
             public int compare(Person o1, Person o2) {
-                if (o1.yyyy < o2.yyyy) return o1.yyyy - o2.yyyy;
-                else if (o1.yyyy > o2.yyyy) return o2.yyyy - o1.yyyy;
-                else {
-                    if (o1.mm < o2.mm) return o1.mm - o2.mm;
-                    else if (o1.mm > o2.mm) return o2.mm - o1.mm;
-                    else {
-                        if (o1.dd < o2.dd) return o1.dd - o2.dd;
-                        else if (o1.dd > o2.dd) return o2.dd - o1.dd;
+                if (o1.yyyy == o2.yyyy) {
+                    if (o1.mm == o2.mm) {
+                        return o2.dd - o1.dd;
                     }
-                    
+                    return o2.mm - o1.mm;
                 }
-                return 0;
+                return o2.yyyy - o1.yyyy;
             }
         });
 
